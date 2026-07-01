@@ -1,0 +1,15 @@
+reviews:
+  request_changes_workflow: true
+  path_filters:
+    - "!priv/static/**"
+  path_instructions:
+    - path: "src/**"
+      instructions: >
+        This project is written in Gleam, compiled to JavaScript, using the
+        Lustre frontend framework. Review with Gleam idioms in mind (pattern
+        matching, the `Result`/`Option` types, immutability) rather than
+        assuming a Rust/Elixir/Node convention.
+    - path: "test/**"
+      instructions: >
+        Tests use gleeunit (Gleam's ExUnit-style test framework). Review for
+        Gleam test conventions.
